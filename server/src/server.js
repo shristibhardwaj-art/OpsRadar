@@ -7,8 +7,8 @@ const { default: app } = await import("./app.js");
 
 const PORT = Number(process.env.PORT) || 8080;
 
-const server = app.listen(PORT, "127.0.0.1", () => {
-  console.log(`OpsRadar server running at http://127.0.0.1:${PORT}`);
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`OpsRadar server running on port ${PORT}`);
 });
 
 server.on("error", (error) => {
